@@ -1,0 +1,12 @@
+node_modules/
+package-lock.json
+.parcel-cache/
+dist/
+lib/
+.vscode/
+.idea/
+*.min.js
+# Logs
+logs/
+*.log
+parcel-bundle-reports/
