@@ -11,9 +11,17 @@ const heading2 = React.createElement(
   { id: "title", key: "h2" },
   "Namaste react",
 );
+const heading3 = (
+  <ul>
+    <li>Home</li>
+    <li>About us </li>
+    <li>Blogs </li>
+  </ul>
+);
 const container = React.createElement("div", { id: "container" }, [
   heading,
   heading2,
+  heading3,
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(container);
