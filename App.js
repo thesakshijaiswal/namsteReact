@@ -18,10 +18,13 @@ const heading3 = (
     <li>Blogs </li>
   </ul>
 );
+//jsx
+const heading4 = <h1>Now im utilising jsx</h1>;
 const container = React.createElement("div", { id: "container" }, [
   heading,
   heading2,
   heading3,
+  heading4,
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(container);
