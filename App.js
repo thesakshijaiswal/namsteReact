@@ -18,7 +18,7 @@ const heading3 = (
     <li>Blogs </li>
   </ul>
 );
-//jsx
+//This how jsx looks
 const heading4 = <h1>Now im utilising jsx</h1>;
 const container = React.createElement("div", { id: "container" }, [
   heading,
@@ -26,5 +26,21 @@ const container = React.createElement("div", { id: "container" }, [
   heading3,
   heading4,
 ]);
+
+// Components in React
+
+//- Functional component (New)
+const HeaderComponent = () => {
+  return (
+    <div>
+      <h3>This is functional component</h3>
+      <p>description for functional component</p>
+    </div>
+  );
+};
+// -Class component (Old)
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(container);
+//root.render(container);
+// render a jsx component using below code line
+root.render(<HeaderComponent />);
