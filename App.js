@@ -1,15 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-const Title = () => <h1>Namaste react assignment 4 question 1</h1>;
-const Header = () => {
-  return (
-    <div className="title">
-      <Title />
-      <h1>Hello React</h1>
-      <h2>welcome to the world of react</h2>
-      <h3>Assignment 4</h3>
+const Header = () => (
+  <div className="heroSection">
+    <div className="logo">LOGO</div>
+    <div className="search">
+      <input type="search" name="Searchbar" id="searchbar" />
     </div>
-  );
-};
+    <div className="userIcon">userIcon</div>
+  </div>
+);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Header></Header>);
+root.render(<Header />);
