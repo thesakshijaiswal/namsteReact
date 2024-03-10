@@ -12,10 +12,10 @@ const Header = () => (
   </div>
 );
 const AppLayout = () => {
-  <div>
+  <>
     <Header />
     <body />
-  </div>;
+  </>;
 };
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Header />);
