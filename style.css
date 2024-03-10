@@ -1,45 +1,6 @@
-body {
+body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.heroSection {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 120px;
-  width: 100%;
-  overflow: hidden;
-  background-color: #15072b;
-  color: #fff;
-}
-.search {
-  background-color: #fff;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-.search i {
-  color: #15072b;
-  font-size: 0.8rem;
-  padding: 0 10px;
-}
-.logo {
-  font-size: 1.5rem;
-}
-#searchbar {
-  width: 80%;
-  border: none;
-  outline: none;
-  background-color: transparent;
-}
-#searchbar::placeholder {
-  font-size: 0.6rem;
-  padding: 15px 5px;
-}
-.userIcon {
-  font-size: 1.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

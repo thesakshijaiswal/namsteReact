@@ -1,10 +1,10 @@
 {
-  "name": "react-playground",
+  "name": "foodfunk",
   "version": "1.0.0",
-  "description": "its my react playground ",
+  "description": "A food ordering app built using react.js",
   "scripts": {
     "start": "parcel index.html",
-    "build":"parcel build index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
