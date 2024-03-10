@@ -1,6 +1,28 @@
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: orange;
+}
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.navbar ul li {
+  padding: 10px;
+  font-weight: 700;
 }
