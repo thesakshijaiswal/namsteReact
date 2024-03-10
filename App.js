@@ -6,7 +6,7 @@ const Header = () => (
       <i class="ri-restaurant-fill"></i>FOODIE
     </div>
     <div className="search">
-      <i class="ri-search-2-line"></i>
+      <i className="ri-search-2-line"></i>
       <input
         type="search"
         name="Searchbar"
