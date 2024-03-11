@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 const Header = () => (
   <div className="navbar">
-    <div className="logo" style={{ color: "brown" }}>
+    <div className="logo">
       FoodFunk
       <i className="ri-bowl-fill"></i>
     </div>
@@ -33,7 +33,9 @@ const RestaurantCard = () => {
       />
       <h2>Burger King</h2>
       <p>American ,Burger</p>
-      <h4>Ratings: 4.5</h4>
+      <h4>
+        Ratings: 4.5<i class="ri-star-fill"></i>
+      </h4>
     </div>
   );
 };

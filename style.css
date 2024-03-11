@@ -4,6 +4,7 @@ body {
   box-sizing: border-box;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  background-color: #fffdf7;
 }
 .navbar {
   display: flex;
@@ -51,12 +52,31 @@ body {
 }
 .foodCard {
   width: 250px;
-  border: 2px solid orange;
   padding: 10px 15px;
-  background-color: whitesmoke;
+  background-color: #ede9df;
   border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 .foodCard img {
   width: 100%;
   border-radius: 10px;
+}
+.foodCard h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.foodCard h4 {
+  font-size: 1.1rem;
+  background-color: #1ec742;
+  width: 120px;
+  padding: 8px 5px;
+  border-radius: 5px;
+}
+.foodCard h4 i {
+  font-size: 0.8rem;
+  margin: 5px;
+}
+.foodCard p {
+  font-size: 1.2rem;
+  font-weight: 500;
 }
