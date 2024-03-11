@@ -49,3 +49,14 @@ body {
     font-weight: 800;
   }
 }
+.foodCard {
+  width: 250px;
+  border: 2px solid orange;
+  padding: 10px 15px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+.foodCard img {
+  width: 100%;
+  border-radius: 10px;
+}

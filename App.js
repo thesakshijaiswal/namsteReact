@@ -23,11 +23,30 @@ const Header = () => (
     </ul>
   </div>
 );
+
+const RestaurantCard = () => {
+  return (
+    <div className="foodCard">
+      <img
+        src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="American Burger"
+      />
+      <h2>Burger King</h2>
+      <p>American ,Burger</p>
+      <h4>Ratings: 4.5</h4>
+    </div>
+  );
+};
+const Body = () => {
+  return <RestaurantCard />;
+};
 const AppLayout = () => {
-  <>
-    <Header />
-    <body />
-  </>;
+  return (
+    <>
+      <Header />
+      <Body />
+    </>
+  );
 };
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Header />);
+root.render(<AppLayout />);
