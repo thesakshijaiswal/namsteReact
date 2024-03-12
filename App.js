@@ -24,17 +24,22 @@ const Header = () => (
   </div>
 );
 
+const cardContent = {
+  image:
+    "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  name: "Burger King",
+  cuisines: ["American", "Burger"],
+  rating: "4.5",
+};
 const RestaurantCard = () => {
   return (
     <div className="foodCard">
-      <img
-        src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="American Burger"
-      />
-      <h2>Burger King</h2>
-      <p>American ,Burger</p>
+      <img src={cardContent.image} alt="American Burger" />
+      <h2>{cardContent.name}</h2>
+      <p>{cardContent.cuisines.join(", ")}</p>
       <h4>
-        Ratings: 4.5<i class="ri-star-fill"></i>
+        Ratings: {cardContent.rating}
+        <i class="ri-star-fill"></i>
       </h4>
     </div>
   );

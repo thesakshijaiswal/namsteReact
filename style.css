@@ -37,19 +37,6 @@ body {
   font-weight: 500;
 }
 
-@media (max-width: 768px) {
-  .navbar .logo {
-    font-size: 1.5rem;
-  }
-  .navbar ul li {
-    display: none;
-  }
-  .navbar ul i {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 800;
-  }
-}
 .foodCard {
   width: 250px;
   padding: 10px 15px;
@@ -79,4 +66,17 @@ body {
 .foodCard p {
   font-size: 1.2rem;
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  .navbar .logo {
+    font-size: 1.5rem;
+  }
+  .navbar ul li {
+    display: none;
+  }
+  .navbar ul i {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
 }
