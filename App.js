@@ -31,7 +31,8 @@ const cardContent = {
   cuisines: ["American", "Burger"],
   rating: "4.5",
 };
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+  console.log(props);
   return (
     <div className="foodCard">
       <img src={cardContent.image} alt="American Burger" />
@@ -39,13 +40,13 @@ const RestaurantCard = () => {
       <p>{cardContent.cuisines.join(", ")}</p>
       <h4>
         Ratings: {cardContent.rating}
-        <i class="ri-star-fill"></i>
+        <i className="ri-star-fill"></i>
       </h4>
     </div>
   );
 };
 const Body = () => {
-  return <RestaurantCard />;
+  return <RestaurantCard restaurant={cardContent} />;
 };
 const AppLayout = () => {
   return (
