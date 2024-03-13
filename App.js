@@ -31,15 +31,15 @@ const cardContent = {
   cuisines: ["American", "Burger"],
   rating: "4.5",
 };
-const RestaurantCard = (props) => {
-  console.log(props);
+const RestaurantCard = ({ restaurant }) => {
+  const { image, name, cuisines, rating } = restaurant;
   return (
     <div className="foodCard">
-      <img src={cardContent.image} alt="American Burger" />
-      <h2>{cardContent.name}</h2>
-      <p>{cardContent.cuisines.join(", ")}</p>
+      <img src={image} alt="American Burger" />
+      <h2>{name}</h2>
+      <p>{cuisines.join(", ")}</p>
       <h4>
-        Ratings: {cardContent.rating}
+        Ratings: {rating}
         <i className="ri-star-fill"></i>
       </h4>
     </div>
