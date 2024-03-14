@@ -31,8 +31,7 @@ const cardContent = {
   cuisines: ["American", "Burger"],
   rating: "4.5",
 };
-const RestaurantCard = ({ restaurant }) => {
-  const { image, name, cuisines, rating } = restaurant;
+const RestaurantCard = ({ image, name, cuisines, rating }) => {
   return (
     <div className="foodCard">
       <img src={image} alt="American Burger" />
@@ -46,7 +45,7 @@ const RestaurantCard = ({ restaurant }) => {
   );
 };
 const Body = () => {
-  return <RestaurantCard restaurant={cardContent} />;
+  return <RestaurantCard {...cardContent} />;
 };
 const AppLayout = () => {
   return (
