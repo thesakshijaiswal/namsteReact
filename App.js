@@ -31,6 +31,7 @@ const cardContent = [
     name: "Burger King",
     cuisines: ["American", "Burger"],
     rating: "4.5",
+    id: "111",
   },
   {
     image:
@@ -38,6 +39,7 @@ const cardContent = [
     name: "kitchen king",
     cuisines: ["South indian", "uttapam"],
     rating: "4.0",
+    id: "112",
   },
   {
     image:
@@ -45,6 +47,7 @@ const cardContent = [
     name: "KFC",
     cuisines: ["noddles", "Pizza", "Burger"],
     rating: "4.6",
+    id: "113",
   },
 ];
 const RestaurantCard = ({ image, name, cuisines, rating }) => {
@@ -64,7 +67,7 @@ const Body = () => {
   return (
     <div className="restaurantCard">
       {cardContent.map((restaurant) => {
-        return <RestaurantCard {...restaurant} />;
+        return <RestaurantCard {...restaurant} key={restaurant.id} />;
       })}
     </div>
   );
