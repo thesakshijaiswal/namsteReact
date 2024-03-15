@@ -37,7 +37,7 @@ const cardContent = [
       "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     name: "kitchen king",
     cuisines: ["South indian", "uttapam"],
-    rating: "4",
+    rating: "4.0",
   },
   {
     image:
@@ -50,21 +50,19 @@ const cardContent = [
 const RestaurantCard = ({ image, name, cuisines, rating }) => {
   return (
     <div className="foodCard">
-      <div className="cardInfo">
-        <img src={image} alt="American Burger" />
-        <h2>{name}</h2>
-        <p>{cuisines.join(", ")}</p>
-        <h4>
-          Ratings: {rating}
-          <i className="ri-star-fill"></i>
-        </h4>
-      </div>
+      <img src={image} alt="American Burger" />
+      <h2>{name}</h2>
+      <p>{cuisines.join(", ")}</p>
+      <h4>
+        Ratings: {rating}
+        <i className="ri-star-fill"></i>
+      </h4>
     </div>
   );
 };
 const Body = () => {
   return (
-    <div>
+    <div className="restaurantCard">
       <RestaurantCard {...cardContent[0]} />
       <RestaurantCard {...cardContent[1]} />
       <RestaurantCard {...cardContent[2]} />
