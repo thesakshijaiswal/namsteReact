@@ -63,9 +63,9 @@ const RestaurantCard = ({ image, name, cuisines, rating }) => {
 const Body = () => {
   return (
     <div className="restaurantCard">
-      <RestaurantCard {...cardContent[0]} />
-      <RestaurantCard {...cardContent[1]} />
-      <RestaurantCard {...cardContent[2]} />
+      {cardContent.map((restaurant) => {
+        return <RestaurantCard {...restaurant} />;
+      })}
     </div>
   );
 };
