@@ -1,4 +1,4 @@
-const Navbar = () => (
+export const Navbar = () => (
   <div className="navbar">
     <div className="logo">
       FoodFunk
@@ -21,4 +21,3 @@ const Navbar = () => (
     </ul>
   </div>
 );
-export default Navbar;

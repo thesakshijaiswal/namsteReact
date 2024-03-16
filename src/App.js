@@ -1,6 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Navbar from "./components/navbar";
+//named import
+import { Navbar } from "./components/navbar";
+//default import
+// import Navbar from "./components/navbar";
 const cardContent = [
   {
     image:
