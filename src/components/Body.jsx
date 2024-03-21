@@ -3,7 +3,7 @@ import { cardContent } from "../constants";
 import { useState } from "react";
 const Body = () => {
   // searchText is a local state variable
-  const [searchText] = useState("kfc"); //To create state variable
+  const [searchText, setSearchText] = useState(); //To create state variable
 
   return (
     <>
@@ -14,7 +14,7 @@ const Body = () => {
           placeholder="Search"
           value={searchText}
           onChange={(e) => {
-            searchText = e.target.value;
+            setSearchText(e.target.value);
           }}
         />
         <button className="searchBtn">Search</button>
