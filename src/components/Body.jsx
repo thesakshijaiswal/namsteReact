@@ -17,6 +17,7 @@ const Body = () => {
             setSearchText(e.target.value);
           }}
         />
+        <h1>{searchText}</h1>
         <button className="searchBtn">Search</button>
       </div>
       <div className="restaurantCard">
