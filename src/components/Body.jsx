@@ -4,6 +4,7 @@ import { useState } from "react";
 const Body = () => {
   // searchText is a local state variable
   const [searchText, setSearchText] = useState(); //To create state variable
+  const [searchCount, setSearchCount] = useState(0);
 
   return (
     <>
@@ -17,8 +18,15 @@ const Body = () => {
             setSearchText(e.target.value);
           }}
         />
-        <h1>{searchText}</h1>
-        <button className="searchBtn">Search</button>
+        <h1>{searchCount}</h1>
+        <button
+          className="searchBtn"
+          onClick={() => {
+            setSearchCount(searchCount + 1);
+          }}
+        >
+          Search
+        </button>
       </div>
       <div className="restaurantCard">
         {cardContent.map((restaurant) => {
