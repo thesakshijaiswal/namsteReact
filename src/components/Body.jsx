@@ -36,7 +36,7 @@ const Body = () => {
         </button>
       </div>
       <div className="restaurantCard">
-        {cardContent.map((restaurant) => {
+        {restaurants.map((restaurant) => {
           return <RestaurantCard {...restaurant} key={restaurant.id} />;
         })}
       </div>
