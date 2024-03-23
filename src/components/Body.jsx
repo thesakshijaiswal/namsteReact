@@ -4,7 +4,7 @@ import { useState } from "react";
 
 function filterData(searchText, restaurants) {
   const filterResult = restaurants.filter((restaurant) =>
-    restaurant.name.includes(searchText),
+    restaurant.name.toLowerCase().includes(searchText.toLowerCase()),
   );
   return filterResult;
 }
@@ -12,6 +12,7 @@ const Body = () => {
   // searchText is a local state variable
   const [searchText, setSearchText] = useState(""); //To create state variable
   const [restaurants, setRestaurants] = useState(cardContent);
+  const [filteredRestaurants, setFilteredRestaurants] = useState(cardContent);
 
   return (
     <>
@@ -29,14 +30,14 @@ const Body = () => {
           className="searchBtn"
           onClick={() => {
             const data = filterData(searchText, restaurants);
-            setRestaurants(data);
+            setFilteredRestaurants(data);
           }}
         >
           Search
         </button>
       </div>
       <div className="restaurantCard">
-        {restaurants.map((restaurant) => {
+        {filteredRestaurants.map((restaurant) => {
           return <RestaurantCard {...restaurant} key={restaurant.id} />;
         })}
       </div>
