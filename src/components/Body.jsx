@@ -3,14 +3,14 @@ import { cardContent } from "../constants";
 import { useState } from "react";
 
 function filterData(searchText, restaurants) {
-  const filterResult = restaurants.filter((restaurant) => {
-    restaurant.name.includes(searchText);
-  });
+  const filterResult = restaurants.filter((restaurant) =>
+    restaurant.name.includes(searchText),
+  );
   return filterResult;
 }
 const Body = () => {
   // searchText is a local state variable
-  const [searchText, setSearchText] = useState(); //To create state variable
+  const [searchText, setSearchText] = useState(""); //To create state variable
   const [restaurants, setRestaurants] = useState(cardContent);
 
   return (
