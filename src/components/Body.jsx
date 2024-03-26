@@ -33,7 +33,7 @@ const Body = () => {
             setFilteredRestaurants(data);
           }}
         >
-          <i class="ri-search-2-line"></i>
+          <i className="ri-search-2-line"></i>
         </button>
       </div>
       <div className="restaurantCard">
