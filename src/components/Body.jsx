@@ -16,7 +16,7 @@ const Body = () => {
 
   useEffect(() => {
     console.log("useEffect is called!");
-  }, []);
+  }, [searchText]);
 
   return (
     <>
