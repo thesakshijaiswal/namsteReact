@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import { cardContent } from "../constants";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function filterData(searchText, restaurants) {
   const filterResult = restaurants.filter((restaurant) =>
@@ -13,6 +13,10 @@ const Body = () => {
   const [searchText, setSearchText] = useState(""); //To create state variable
   const [restaurants, setRestaurants] = useState(cardContent);
   const [filteredRestaurants, setFilteredRestaurants] = useState(cardContent);
+
+  useEffect(() => {
+    console.log("useEffect is called!");
+  }, []);
 
   return (
     <>
