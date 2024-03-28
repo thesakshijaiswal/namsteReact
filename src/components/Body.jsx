@@ -15,8 +15,16 @@ const Body = () => {
   const [filteredRestaurants, setFilteredRestaurants] = useState(cardContent);
 
   useEffect(() => {
-    console.log("useEffect is called!");
-  }, [searchText]);
+    getRestaurants();
+  }, []);
+
+  async function getRestaurants() {
+    const data = await fetch(
+      "https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.51981990724166&lng=73.86026275822753&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING",
+    );
+    const json = await data.json();
+    console.log(json);
+  }
 
   return (
     <>
