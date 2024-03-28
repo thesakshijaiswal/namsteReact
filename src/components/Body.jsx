@@ -1,5 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
-import { cardContent } from "../constants";
+import { API_URL } from "../constants";
 import { useState, useEffect } from "react";
 
 function filterData(searchText, restaurants) {
@@ -11,19 +11,24 @@ function filterData(searchText, restaurants) {
 const Body = () => {
   // searchText is a local state variable
   const [searchText, setSearchText] = useState(""); //To create state variable
-  const [restaurants, setRestaurants] = useState(cardContent);
-  const [filteredRestaurants, setFilteredRestaurants] = useState(cardContent);
+  const [restaurants, setRestaurants] = useState();
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   useEffect(() => {
     getRestaurants();
   }, []);
 
   async function getRestaurants() {
-    const response = await fetch(
-      `https://api.allorigins.win/get?url=${encodeURIComponent("https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.51981990724166&lng=73.86026275822753&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")}`,
-    );
+    const response = await fetch(API_URL);
     const data = await response.json();
     console.log(data);
+    const APICall =
+      data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants ||
+      data?.data?.cards[2]?.card?.card?.gridElement?.infoWithStyle?.restaurants;
+    console.log(APICall);
+    setRestaurants(APICall);
+    setFilteredRestaurants(APICall);
   }
 
   return (
