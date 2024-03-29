@@ -57,7 +57,9 @@ const Body = () => {
       </div>
       <div className="restaurantCard">
         {filteredRestaurants?.map((restaurant) => {
-          return <RestaurantCard {...restaurant} key={restaurant.id} />;
+          return (
+            <RestaurantCard {...restaurant.info} key={restaurant.info.id} />
+          );
         })}
       </div>
     </>
