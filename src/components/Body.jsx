@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 function filterData(searchText, restaurants) {
   const filterResult = restaurants.filter((restaurant) =>
-    restaurant.name.toLowerCase().includes(searchText.toLowerCase()),
+    restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()),
   );
   return filterResult;
 }
