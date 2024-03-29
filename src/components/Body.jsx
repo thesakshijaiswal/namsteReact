@@ -12,7 +12,7 @@ const Body = () => {
   // searchText is a local state variable
   const [searchText, setSearchText] = useState(""); //To create state variable
   const [restaurants, setRestaurants] = useState();
-  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState();
 
   useEffect(() => {
     getRestaurants();
@@ -20,13 +20,15 @@ const Body = () => {
 
   async function getRestaurants() {
     const response = await fetch(API_URL);
-    const data = await response.json();
-    console.log(data);
+    const jsonData = await response.json();
+    const data = JSON.parse(jsonData.contents);
+    console.log("Api call", data);
     const APICall =
       data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants ||
-      data?.data?.cards[2]?.card?.card?.gridElement?.infoWithStyle?.restaurants;
-    console.log(APICall);
+      data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
+    console.log("Api call is made here!", APICall);
     setRestaurants(APICall);
     setFilteredRestaurants(APICall);
   }
@@ -54,7 +56,7 @@ const Body = () => {
         </button>
       </div>
       <div className="restaurantCard">
-        {filteredRestaurants.map((restaurant) => {
+        {filteredRestaurants?.map((restaurant) => {
           return <RestaurantCard {...restaurant} key={restaurant.id} />;
         })}
       </div>
