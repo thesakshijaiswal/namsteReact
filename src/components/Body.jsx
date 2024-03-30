@@ -11,8 +11,8 @@ function filterData(searchText, restaurants) {
 const Body = () => {
   // searchText is a local state variable
   const [searchText, setSearchText] = useState(""); //To create state variable
-  const [restaurants, setRestaurants] = useState();
-  const [filteredRestaurants, setFilteredRestaurants] = useState();
+  const [restaurants, setRestaurants] = useState([]);
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   useEffect(() => {
     getRestaurants();
