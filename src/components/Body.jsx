@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { API_URL } from "../constants";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
 function filterData(searchText, restaurants) {
   const filterResult = restaurants.filter((restaurant) =>
@@ -37,7 +38,9 @@ const Body = () => {
     }
   }
 
-  return (
+  return restaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <>
       <div className="searchBar">
         <input
