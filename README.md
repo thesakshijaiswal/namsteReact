@@ -16,4 +16,7 @@ This is a Namaste React playground where I did practiced alot of React concepts 
 - React components 
 - React fragments
 - named and default import and export
+- useEffect hook
+- microservices and its architecture 
+- conditional rendering 
 
