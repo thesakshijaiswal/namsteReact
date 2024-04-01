@@ -1,7 +1,9 @@
+import RestaurantCard from "./RestaurantCard";
+import "../../shimmer.css";
 const Shimmer = () => {
   return (
     <>
-      <h1>Loading ...</h1>
+      <RestaurantCard />
     </>
   );
 };
