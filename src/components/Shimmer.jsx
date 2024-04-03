@@ -1,13 +1,12 @@
-import RestaurantCard from "./RestaurantCard";
-import "../../shimmer.css";
-const Shimmer = () => {
-  return (
-    <div className="card">
-      <div className="cardImg"></div>
-      <h2></h2>
-      <p></p>
-      <h4></h4>
-    </div>
-  );
+import React from "react";
+import ShimmerCard from "./ShimmerCard";
+const HomeShimmer = () => {
+  const shimmerUICards = [];
+  for (let i = 0; i < 20; i++) {
+    shimmerUICards.push(<ShimmerCard key={i} />);
+  }
+
+  return <div className="card">{shimmerUICards}</div>;
 };
-export default Shimmer;
+
+export default HomeShimmer;
