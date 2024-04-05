@@ -1,7 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { API_URL } from "../constants";
 import { useState, useEffect } from "react";
-import Shimmer from "./Shimmer";
+import { ShimmerHome } from "../shimmer";
 
 function filterData(searchText, restaurants) {
   const filterResult = restaurants.filter((restaurant) =>
@@ -39,7 +39,7 @@ const Body = () => {
   }
 
   return restaurants.length === 0 ? (
-    <Shimmer />
+    <ShimmerHome />
   ) : (
     <>
       <div className="searchBar">

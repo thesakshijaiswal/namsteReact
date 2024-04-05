@@ -1,4 +1,4 @@
-import "../../shimmer.css";
+import "./shimmer.css";
 const ShimmerCard = () => {
   return (
     <div className="card">
