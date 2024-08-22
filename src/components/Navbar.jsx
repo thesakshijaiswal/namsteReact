@@ -1,10 +1,10 @@
 const Navbar = () => (
-  <div className="navbar">
-    <div className="logo">
+  <div className="navbar h-32 flex bg-[#f7f4f4]">
+    <div className="logo font-bold">
       FoodFunk
       <i className="ri-bowl-fill"></i>
     </div>
-    <ul>
+    <ul className="flex">
       <li>
         Home<i className="ri-home-smile-fill"></i>
       </li>

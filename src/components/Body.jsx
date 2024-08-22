@@ -1,11 +1,11 @@
 import RestaurantCard from "./RestaurantCard";
-import { API_URL } from "../constants";
+import { API_URL } from "../utils/constants.js";
 import { useState, useEffect } from "react";
 import { ShimmerHome } from "../shimmer";
 
 function filterData(searchText, restaurants) {
   const filterResult = restaurants.filter((restaurant) =>
-    restaurant.info.name.toLowerCase().includes(searchText.toLowerCase()),
+    restaurant.info.name.toLowerCase().includes(searchText.toLowerCase())
   );
   return filterResult;
 }
@@ -42,7 +42,7 @@ const Body = () => {
     <ShimmerHome />
   ) : (
     <>
-      <div className="searchBar">
+      <div className="searchBar bg-[#f7f4f4]">
         <input
           type="text"
           className="searchBar"
@@ -62,12 +62,14 @@ const Body = () => {
           <i className="ri-search-2-line"></i>
         </button>
       </div>
-      <div className="restaurantCard">
+      <div className="bg-[#f7f4f4]">
+      <div className="restaurantCard grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 place-items-center container py-20 mx-auto">
         {filteredRestaurants?.map((restaurant) => {
           return (
             <RestaurantCard {...restaurant?.info} key={restaurant?.info?.id} />
           );
         })}
+      </div>
       </div>
     </>
   );
