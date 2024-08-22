@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "description": "A food ordering app built using react.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html",
     "test": "jest"
   },
   "keywords": [
     "react"
   ],
-  "author": "sakshi",
+  "author": "Sakshi Jaiswal",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.11.0",
