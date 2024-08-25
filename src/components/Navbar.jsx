@@ -1,24 +1,10 @@
+import brandLogo from "../../public/brandLogo.png"
 const Navbar = () => (
-  <div className="navbar h-32 flex bg-[#f7f4f4]">
-    <div className="logo font-bold">
-      FoodFunk
-      <i className="ri-bowl-fill"></i>
-    </div>
-    <ul className="flex">
-      <li>
-        Home<i className="ri-home-smile-fill"></i>
-      </li>
-      <li>
-        About<i className="ri-hotel-fill"></i>
-      </li>
-      <li>
-        Offers<i className="ri-money-rupee-circle-fill"></i>
-      </li>
-      <li>
-        Cart<i className="ri-shopping-cart-2-fill"></i>
-      </li>
-      <i className="ri-menu-3-line"></i>
-    </ul>
-  </div>
+  <nav className="p-3 flex justify-between">
+    <a href="#" id="brand" className="flex gap-2 items-center">
+      <img src={brandLogo} alt="brandLogo" className="w-32 object-cover max-w-32 max-h-32" />
+      <span className="tracking-wider text-3xl font-extrabold">FoodFunk</span>
+    </a>
+  </nav>
 );
 export default Navbar;
