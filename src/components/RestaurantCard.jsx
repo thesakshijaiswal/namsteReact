@@ -1,9 +1,10 @@
 import { IMGUrl } from "../utils/constants";
+
 const RestaurantCard = ({ name, cloudinaryImageId, avgRating, sla, cuisines, locality,}) => {
   return (
-    <div className="m-4 w-72 overflow-hidden rounded-xl h-96">
+    <div className="-m-4 w-72 overflow-hidden rounded-xl h-96 md:hover:scale-110 sm:hover:scale-105 xs:hover:scale-110 duration-300 ease-in-out">
         <div className="flex flex-col rounded-xl">
-          <div className="h-56 w-full rounded-xl overflow-hidden">
+          <div className="h-44 w-full rounded-xl overflow-hidden">
             <img src={IMGUrl + cloudinaryImageId} alt={name} className="w-full h-full object-cover object-center" />
           </div>
           <div className="p-2">
